@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+  
+<body>
+    <div class="container mt-5">
+        <h1>Enter URL to Scrape or Input Data Manually</h1>
+        <form method="POST" action="/input">
+            <div class="mb-3">
+                <label for="url" class="form-label">URL (optional):</label>
+                <input type="text" class="form-control" id="url" name="url">
+            </div>
+            <button type="submit" class="btn btn-primary">Scrape</button>
+            <button type="submit" class="btn btn-secondary" name="manual" value="true">Manual Input</button>
+        </form>
+    </div>
+</body>
+
+{% endblock %}
