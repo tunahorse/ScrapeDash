@@ -1,1 +1,1 @@
-![image info](https://github.com/tunahorse/ScrapeDash/blob/main/input.png)
+Input ![image info](https://github.com/tunahorse/ScrapeDash/blob/main/input.png)
