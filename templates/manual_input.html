@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+  
+<body>
+    <div class="container mt-5">
+        <h1>Manual Input - {{ directory }}</h1>
+        <form method="POST" action="{{ url_for('manual_input', directory=directory) }}" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label for="directory" class="form-label">Directory Name:</label>
+                <input type="text" class="form-control" id="directory" name="directory" value="{{ directory }}">
+            </div>
+            <div class="mb-3">
+                <label for="files" class="form-label">Select files to upload:</label>
+                <input type="file" class="form-control" id="files" name="files" multiple>
+            </div>
+            <div class="mb-3">
+                <label for="manual_text" class="form-label">Enter text manually:</label>
+                <textarea class="form-control" id="manual_text" name="manual_text" rows="5"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Save</button>
+            <a href="{{ url_for('display_data', directory=directory) }}" class="btn btn-secondary">Cancel</a>
+        </form>
+    </div>
+</body>
+
+{% endblock %}
